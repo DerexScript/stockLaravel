@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MeuControlador; 
-
+use App\Http\Controllers\ClienteControlador; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +27,7 @@ Route::get('/idade', [MeuControlador::class, 'getIdade']);
 Route::get('/multiplicar/{n1}/{n2}', [MeuControlador::class, 'multiplicar']);
 
 
+Route::resource('clientes', ClienteControlador::class);
 
 
 
