@@ -30,7 +30,8 @@ class ClienteControlador extends Controller
     {
         $clientes = session('clientes');
         //return view('clientes.index', compact(['clientes']));
-        return view('clientes.index', ['clientes' => $clientes]);
+        //return view('clientes.index', ['clientes' => $clientes]);
+        return view('clientes.index')->with('clientes', $clientes)->with('titulo', "Todos Os Clientes");
     }
 
     /**
